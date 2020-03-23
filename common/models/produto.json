@@ -1,0 +1,30 @@
+{
+  "name": "produto",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nome": {
+      "type": "string",
+      "required": true
+    },
+    "preco": {
+      "type": "string",
+      "required": true
+    },
+    "qtdEstoque": {
+      "type": "string",
+      "required": true
+    },
+    "vlrdeCompra": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

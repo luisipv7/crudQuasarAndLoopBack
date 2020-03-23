@@ -1,0 +1,22 @@
+{
+  "name": "usuario",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "cpf": {
+      "type": "string",
+      "required": true
+    },
+    "b64foto": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
