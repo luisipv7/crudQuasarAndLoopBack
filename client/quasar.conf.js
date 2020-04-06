@@ -9,6 +9,7 @@ module.exports = function (ctx) {
     boot: [
       'axios',
       'vuelidate',
+      'croopa',
       'vue-async-data-2'
     ],
 
@@ -69,7 +70,7 @@ module.exports = function (ctx) {
       // extractCSS: false,
 
       // https://quasar.dev/quasar-cli/cli-documentation/handling-webpack
-      extendWebpack(cfg) {
+      extendWebpack (cfg) {
         cfg.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -177,7 +178,7 @@ module.exports = function (ctx) {
       // More info: https://quasar.dev/quasar-cli/developing-electron-apps/node-integration
       nodeIntegration: true,
 
-      extendWebpack(cfg) {
+      extendWebpack (cfg) {
         // do something with Electron main process Webpack cfg
         // chainWebpack also available besides this extendWebpack
       }

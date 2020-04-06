@@ -10,11 +10,23 @@
       "type": "string",
       "required": true
     },
+    "b64FotoProd": {
+      "type": "string",
+      "required": true
+    },
     "preco": {
       "type": "string",
       "required": true
     },
     "qtdEstoque": {
+      "type": "string",
+      "required": true
+    },
+    "descProduto": {
+      "type": "string",
+      "required": true
+    },
+    "especTecnicas": {
       "type": "string",
       "required": true
     },

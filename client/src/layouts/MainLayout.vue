@@ -7,7 +7,25 @@
             <img src="../statics/icons/logo_kabum_.png">
           </q-btn>
         </q-toolbar-title>
-        <div>Quasar v{{ $q.version }}</div>
+        <q-btn round>
+          <q-avatar size="42px">
+            <img src="https://cdn.quasar.dev/img/avatar2.jpg"> <!--- Adicionar condicional se profile tiver  -->
+          </q-avatar>
+          <q-menu>
+          <q-list dense style="min-width: 100px">
+            <q-item clickable to="/newUser">
+              <q-item-section>Login</q-item-section>
+            </q-item>
+            <q-item clickable >
+              <q-item-section>Meus pedidos</q-item-section>
+            </q-item>
+            <q-separator />
+            <q-item clickable to="/Profile">
+              <q-item-section>Preferências</q-item-section>
+            </q-item>
+          </q-list>
+              </q-menu>
+        </q-btn>
       </q-toolbar>
       <q-card class="bg-primary text-white">
         <q-tabs
@@ -716,43 +734,52 @@
       </q-card>
     </q-header>
     <q-page-container>
-       <q-carousel
-          animated
-          v-model="slide"
-          arrows
-          navigation
-          infinite
-        >
-          <q-carousel-slide
-            :name="1"
-            img-src="https://cdn.quasar.dev/img/mountains.jpg"
-          />
-          <q-carousel-slide
-            :name="2"
-            img-src="https://cdn.quasar.dev/img/parallax1.jpg"
-          />
-          <q-carousel-slide
-            :name="3"
-            img-src="https://cdn.quasar.dev/img/parallax2.jpg"
-          />
-          <q-carousel-slide
-            :name="4"
-            img-src="https://cdn.quasar.dev/img/quasar.jpg"
-          />
-        </q-carousel>
-        <q-breadcrumbs class="text-brown">
-      <template v-slot:separator>
-        <q-icon
-          size="1.5em"
-          name="chevron_right"
-          color="primary"
+      <q-carousel
+        animated
+        v-model="slide"
+        arrows
+        navigation
+        infinite
+      >
+        <q-carousel-slide
+          :name="1"
+          img-src="https://cdn.quasar.dev/img/mountains.jpg"
         />
-      </template>
+        <q-carousel-slide
+          :name="2"
+          img-src="https://cdn.quasar.dev/img/parallax1.jpg"
+        />
+        <q-carousel-slide
+          :name="3"
+          img-src="https://cdn.quasar.dev/img/parallax2.jpg"
+        />
+        <q-carousel-slide
+          :name="4"
+          img-src="https://cdn.quasar.dev/img/quasar.jpg"
+        />
+      </q-carousel>
+      <q-breadcrumbs class="text-brown">
+        <template v-slot:separator>
+          <q-icon
+            size="1.5em"
+            name="chevron_right"
+            color="primary"
+          />
+        </template>
 
-      <q-breadcrumbs-el label="Home" icon="home" />
-      <q-breadcrumbs-el label="Components" icon="widgets" />
-      <q-breadcrumbs-el label="Breadcrumbs" icon="navigation" />
-    </q-breadcrumbs>
+        <q-breadcrumbs-el
+          label="Home"
+          icon="home"
+        />
+        <q-breadcrumbs-el
+          label="Components"
+          icon="widgets"
+        />
+        <q-breadcrumbs-el
+          label="Breadcrumbs"
+          icon="navigation"
+        />
+      </q-breadcrumbs>
       <router-view />
     </q-page-container>
   </q-layout>
